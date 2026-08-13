@@ -1,5 +1,13 @@
 # T8-penguin-canvas 工作约束
 
+## notmaster fork 本地工作流
+
+- 在本 fork 中开始任何开发或跨会话工作前，还必须完整阅读并遵循 `.nm-workflow/RULES.md`。
+- 当前本地仓库为 `/Users/jango/code/osc/workspace-T8-penguin-canvas/T8-penguin-canvas`；`origin` 指向 `notmaster/T8-penguin-canvas`，`upstream` 指向 `T8mars/T8-penguin-canvas`。
+- 本 fork 使用 `dev` 作为个人集成分支，任务分支从最新的 `dev` 创建；同步原项目时先 fetch 并核对 `upstream/main`，再将其合入 `dev`。
+- 本项目沿用上游现有的 npm 与 `package-lock.json`，不因通用模板改用 pnpm。
+- 下文涉及上游维护者 Windows 路径、默认开发分支或 canonical core 的说明仅作为上游背景；在本 fork 中由本节的本地路径、远端和分支约定覆盖。产品安全、版本、发布和保护文件约束仍然有效。
+
 在修改代码、架构、配置、测试、UI、部署、GitHub 或技术文档前，完整阅读本文件、`SKILL.md`、`features.json`、`roadmap.md`、`package.json`、相关源码/测试，以及当前交接记录。项目没有 `meta.json`。
 
 ## 当前权威开发路径

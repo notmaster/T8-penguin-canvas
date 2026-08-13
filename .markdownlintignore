@@ -1,0 +1,7 @@
+node_modules/
+build/
+dist/
+dist_electron/
+output/
+thumbnails/
+userdata/
