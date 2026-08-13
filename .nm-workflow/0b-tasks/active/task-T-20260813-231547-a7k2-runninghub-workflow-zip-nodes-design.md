@@ -25,9 +25,12 @@ depends_on: []
 - [x] 编写正式设计方案。
 - [x] 同步项目结构文档。
 - [x] 执行 Markdown、结构、JSON 与差异检查。
-- [x] 将 Task 标记为 `ready` 并准备本地提交，等待方案审查。
+- [x] 完成首轮方案审查并记录阻断项。
+- [x] 按审查意见修订提交幂等、字段来源、秘密隔离、站点粘连、流式事务和安全解压契约。
+- [x] 补充 macOS、Windows 与 Linux 的跨平台归档运行时契约和实机可用性依据。
+- [x] 重新执行文档与仓库校验，将 Task 恢复为 `ready` 并提交修订。
 
-## 验证
+## 首版方案验证
 
 - 通过：Prettier 格式化和 `--check` 覆盖本 Task、正式设计与项目结构 Markdown。
 - 通过：`npx markdownlint` 覆盖本 Task、正式设计与项目结构 Markdown。
@@ -36,3 +39,12 @@ depends_on: []
 - 通过：`node -e` 解析 `features.json`、`package.json` 和 `backend/src/shared/canvasNodeSchema.json`。
 - 通过：`git diff --check` 与精确差异复核。
 - 未运行产品测试、构建或真实 RunningHub 任务：本分支只有方案和工作流文档，没有产品实现。
+
+## 首轮审查修订验证
+
+- 通过：RunningHub create 无幂等键、API prompt 非完整 schema、站点范围和大文件流式边界均已转为显式失败关闭契约。
+- 通过：原始 workflow JSON、会话秘密、config 冲突和复制/导出/协作/恢复泄漏边界已纳入设计与测试矩阵。
+- 通过：官方 7-Zip 下载页确认提供 macOS arm64/x86-64 universal console runtime；本机 Apple Silicon 临时运行 26.02 `7zz` 成功，未安装系统软件或修改仓库。
+- 通过：`npm run worktree:check`、`npm run worktree:development` 和 `npm run feature-sync:check`。
+- 通过：Prettier、markdownlint、JSON/schema 解析与 `git diff --check`。
+- 未运行产品测试、Electron 构建、归档攻击样本或真实 RunningHub 任务；这些属于复审通过后的实施和独立授权范围。
