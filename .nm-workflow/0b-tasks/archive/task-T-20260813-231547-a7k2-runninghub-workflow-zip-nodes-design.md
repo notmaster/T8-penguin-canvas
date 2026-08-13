@@ -1,6 +1,6 @@
 ---
 id: T-20260813-231547-a7k2
-status: ready
+status: done
 depends_on: []
 ---
 
@@ -29,6 +29,7 @@ depends_on: []
 - [x] 按审查意见修订提交幂等、字段来源、秘密隔离、站点粘连、流式事务和安全解压契约。
 - [x] 补充 macOS、Windows 与 Linux 的跨平台归档运行时契约和实机可用性依据。
 - [x] 重新执行文档与仓库校验，将 Task 恢复为 `ready` 并提交修订。
+- [x] 方案审查通过，获授权合入 `dev` 并归档 Task。
 
 ## 首版方案验证
 
@@ -47,4 +48,10 @@ depends_on: []
 - 通过：官方 7-Zip 下载页确认提供 macOS arm64/x86-64 universal console runtime；本机 Apple Silicon 临时运行 26.02 `7zz` 成功，未安装系统软件或修改仓库。
 - 通过：`npm run worktree:check`、`npm run worktree:development` 和 `npm run feature-sync:check`。
 - 通过：Prettier、markdownlint、JSON/schema 解析与 `git diff --check`。
-- 未运行产品测试、Electron 构建、归档攻击样本或真实 RunningHub 任务；这些属于复审通过后的实施和独立授权范围。
+- 未运行产品测试、Electron 构建、归档攻击样本或真实 RunningHub 任务；这些属于后续开发和独立授权范围。
+
+## 合并结论
+
+- 2026-08-13：用户确认方案审查通过并授权合入 `dev`、以非强制方式推送 `origin/dev`。
+- 合并前重新 fetch 并确认本地 `dev` 与 `origin/dev` 同为 `006f8b011f9b6a85ee4647fadd245b69db3f8943`，且该提交是任务分支祖先。
+- 受保护文件在任务分支、本地 `dev` 与 `origin/dev` 的 Git blob 一致，本任务未修改或暂存它们。
