@@ -35,6 +35,7 @@ T8-penguin-canvas/
 ├── package.json                     # npm 依赖、命令与构建配置
 ├── package-lock.json                # npm 依赖锁文件
 ├── PROJECT_STRUCTURE.md             # 本文件
+├── README.notmaster.md              # notmaster fork 的个人运行与开发指南
 └── README.md                        # 项目定位、安装、使用和发布入口
 ```
 
