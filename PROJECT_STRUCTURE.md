@@ -5,8 +5,12 @@ T8-penguin-canvas/
 ├── .agents/                         # 上游画布 Agent skill 与参考资料
 ├── .nm-workflow/
 │   ├── 0a-docs/                     # 长期有效的需求、设计、决策和报告
+│   │   └── design-20260813-runninghub-workflow-zip-nodes.md
+│   │                                   # RunningHub Workflow 与密码 ZIP 节点待审查方案
 │   ├── 0b-tasks/
 │   │   ├── active/                  # active、blocked 或 ready Task
+│   │   │   └── task-T-20260813-231547-a7k2-runninghub-workflow-zip-nodes-design.md
+│   │   │                               # 本次方案落盘与审查任务
 │   │   └── archive/                 # done 或 cancelled Task
 │   ├── 0c-work-packages/
 │   │   ├── active/                  # 未归档 Work Package
